@@ -5,6 +5,8 @@ namespace Lesson_01
    public class StopWatch
     {
         private DateTime _timeStart;
+        private DateTime _timeStop;
+        private bool _isRunning;
 
         public StopWatch()
         {
@@ -13,15 +15,34 @@ namespace Lesson_01
 
         public void Start()
         {
-            if(_timeStart == null)
-                _timeStart = DateTime.Now;
-            Console.WriteLine(_timeStart.Second);
+            if (_isRunning)
+            {
+                throw new InvalidOperationException("Stopwatch is already running!");
+            }
+
+            _timeStart = DateTime.Now;
+            _isRunning = true;
+            
         }
         
         public void Stop()
         {
-            var timeSpan = DateTime.Now - _timeStart;
-            Console.WriteLine(timeSpan);
+            if (!_isRunning)
+            {
+                throw new InvalidOperationException("Stopwatch is not currently running!");
+            }
+
+            _timeStop = DateTime.Now;
+            _isRunning = false;
+            
+        }
+
+
+        public TimeSpan GetInterval()
+        {
+            
+            return _timeStop - _timeStart;
+            
         }
 
         public void Reset()
@@ -36,17 +57,14 @@ namespace Lesson_01
         public static void Main(string[] args)
         {
             var stopWatch = new StopWatch();
+            Console.WriteLine("Press enter to start the stopwatch...");
+            Console.ReadKey();
             stopWatch.Start();
+            Console.ReadKey();
             stopWatch.Stop();
-            stopWatch.Start();
-            stopWatch.Stop();
-            stopWatch.Start();
-            stopWatch.Stop();
-            stopWatch.Start();
-            stopWatch.Stop();
-            stopWatch.Reset();
-            stopWatch.Start();
-            stopWatch.Stop();
+            Console.WriteLine("Interval: " + stopWatch.GetInterval());
+
+            
 
         }
     }

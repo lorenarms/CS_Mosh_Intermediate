@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D442A366-8C0C-4709-AE30-1E5B06B49066}</ProjectGuid>
+    <ProjectGuid>{62AFD79A-BE33-47E9-86F5-5C18A32945D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson_05_DataBase_Command</RootNamespace>
-    <AssemblyName>Lesson_05_DataBase_Command</AssemblyName>
+    <RootNamespace>Lesson_08_WorkFlow_Engine</RootNamespace>
+    <AssemblyName>Lesson_08_WorkFlow_Engine</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,7 +36,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Driver.cs" />
+    <Compile Include="ITask.cs" />
+    <Compile Include="WorkFlow.cs" />
+    <Compile Include="WorkFlowEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Instructions.txt" />
