@@ -5,3 +5,7 @@ These applications in C# were all written as exercises of the concepts I learned
 Each application has very short title at the top of the code to explain what it is. Some applications have a .txt file to explain the purpose of the application. Below is a link to the course.
 
  <a href="https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop/">C# Intermediate: Classes, Interfaces and OOP</a> 
+ 
+ My Certificate of Completion
+ 
+ <img src="https://github.com/lorenarms/Personal_CSharp_Mosh_Intermediate/blob/master/C-Sharp%20Intermediate.jpg" alt="Certificate" width=auto>
